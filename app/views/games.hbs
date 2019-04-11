@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video games</title>
+</head>
+
+<body>
+    <div>
+        <ul>VideoGames
+            {{#each gamesList}}
+            {{#if @first}}
+            <li>{{@index}}: {{this}}</li>
+            {{else if @last}}
+            <li>{{@index}}: {{this}}</li>
+            {{else}}
+            <li>{{this}}</li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        <ul>Consoles
+            {{#each consolesObj}}
+            <li>{{@key}} {{this}}</li>
+            {{/each}}
+        </ul>
+        {{#with country}}
+        <ul>{{name}}</ul>
+        {{/with}}
+    </div>
+
+</body>
+
+</html>

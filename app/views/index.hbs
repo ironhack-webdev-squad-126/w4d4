@@ -10,6 +10,14 @@
 
 <body>
     <h1>Hello {{name}}</h1>
+    {{#if bool}}
+    <h4>You Win!</h4>
+    {{else}}
+    <h4>You Lose!</h4>
+    {{/if}}
+    {{#unless name}}
+    <h5>You didn't provide a name...</h5>
+    {{/unless}}
 </body>
 
 </html>
